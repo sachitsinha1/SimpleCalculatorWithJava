@@ -17,12 +17,12 @@ public class Operacoes {
 		return resultado;
 	}
 
-	public double divide(float numA, float numB) {
+	public double divide(double numA, double numB) {
 		resultado = numA / numB;
 		return resultado;
 	}
 
-	public double multiplica(float numA, float numB) {
+	public double multiplica(double numA, double numB) {
 		resultado = numA * numB;
 		return resultado;
 	}
