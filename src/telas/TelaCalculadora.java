@@ -30,18 +30,7 @@ public class TelaCalculadora extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					TelaCalculadora frame = new TelaCalculadora();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
 
 	/**
 	 * Create the frame.
@@ -230,7 +219,6 @@ public class TelaCalculadora extends JFrame {
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(txtResultado, 404, 404, 404)
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(btn7, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED)
@@ -275,7 +263,9 @@ public class TelaCalculadora extends JFrame {
 										.addComponent(btnMultip, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)
 										.addComponent(btnAdic, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)
 										.addComponent(btnDiv, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)))))
-						.addComponent(formattedTextField, GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE))
+						.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
+							.addComponent(formattedTextField, Alignment.LEADING)
+							.addComponent(txtResultado, Alignment.LEADING, 404, 404, Short.MAX_VALUE)))
 					.addContainerGap())
 		);
 		gl_contentPane.setVerticalGroup(
